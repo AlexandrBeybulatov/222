@@ -23,18 +23,12 @@ public class CarServiceImpl implements CarService {
         carList.add(new Car(4, "suzuki", "gray"));
         carList.add(new Car(5, "mazda", "gold"));
 
-        if (count==1) {
-            carList = carList.subList(0, 1);
-        } else if(count==2){
-            carList = carList.subList(0, 2);
-        } else if(count==3){
-            carList = carList.subList(0, 3);
-        } else if(count==4){
-            carList = carList.subList(0, 4);
-        } else if(count==5){
-            carList = carList.subList(0, 5);
-        } else if (count>5) {
+        if (count<5) {
+            carList = carList.subList(0, count);
+        } else {
            carList = carList; }
+
+
         return carList;
     }
 }
