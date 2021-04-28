@@ -25,8 +25,7 @@ public class CarServiceImpl implements CarService {
 
         if (count<5) {
             carList = carList.subList(0, count);
-        } else {
-           carList = carList; }
+        }
 
 
         return carList;
